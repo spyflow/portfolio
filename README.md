@@ -1,48 +1,43 @@
-# **Once UI for Next.js**
+# **Portafolio de [Tu Nombre]**
 
-<span style="font-size: 22px;">Once UI is a lightweight, versatile design system with easy customization and practical components.
+<span style="font-size: 22px;">Bienvenido a mi portafolio personal, donde muestro mis proyectos, habilidades y experiencia profesional.  
+Este portafolio está desarrollado con Next.js y utiliza **Once UI**, un sistema de diseño versátil y ligero.</span>  
 <br>
 
-![Once UI](public/images/cover.png)
+![Portafolio](public/images/cover.png)
 
-<span style="font-size: 18px;">Start building your Next.js app in minutes with:</span> 
-* **A robust token and style system** that simplifies customization and ensures consistency. 
-* **A copy-and-paste component library** that integrates seamlessly into your project.
-* **Interactive documentation** to apply your branding and set component properties.
+<span style="font-size: 18px;">Características principales:</span>  
+* **Diseño moderno y personalizable** gracias a Once UI.  
+* **Componentes dinámicos y reutilizables** que permiten una experiencia de usuario fluida y atractiva.  
+* **Optimización y rapidez en el desarrollo**, aprovechando la potencia de Once UI y Next.js.  
 <br><br>
 
-# **Documentation**
-The documentation is available at [once-ui.com/docs](https://once-ui.com/docs).
+# **Sobre Once UI**
+Once UI es el sistema de diseño que utilicé para crear este portafolio. Ofrece componentes prácticos, un sistema robusto de estilos y documentación interactiva para personalización.  
+Más información en [once-ui.com/docs](https://once-ui.com/docs).  
 <br><br>
 
-# **Authors**
-Connect with us!
+# **Sobre mí**
+¡Conecta conmigo!  
 
-Lorant One: [Site](https://lorant.one), [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/lorant-one/)  
-Zsofia Komaromi: [Site](https://zsofia.pro), [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
+**[Tu Nombre]**  
+- Sitio web: [spyflow.link/twitch](#)  
+- LinkedIn: [cl.linkedin.com/in/javier-ferrada-riquelme](#)  
+- GitHub: [github.com/spyflow](#)  
 <br><br>
 
-# **Get involved**
-- Join the [Design Engineers Club](https://discord.com/invite/5EyAQ4eNdS) on Discord to connect with designers, developers and share your projects.
-- Report a [bug](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=bug&template=bug_report.md).
-- Submit a [feature request](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=feature%20request&template=feature_request.md).
+# **Contribuye**
+Si quieres mejorar este portafolio o aprender del código:  
+- Reporta un [bug](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=bug&template=bug_report.md).  
+- Sugiere una [mejora](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=feature%20request&template=feature_request.md).  
 <br><br>
 
-# **License**
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+# **Licencia**
+Este proyecto está distribuido bajo la Licencia MIT. Consulta `LICENSE.txt` para más detalles.  
 <br><br>
 
-# **Once UI for Figma**
+# **Despliega tu versión**
+¿Quieres probar algo similar? Usa los botones de despliegue rápido:  
 
-Once UI is also available for Figma.  
-Design and prototype entire products from scratch in hours. Use the same tokens and components as the Next.js design system.
-
-Grab a copy from the [Figma Community](https://figma.com/).
-<br><br>
-
-# **Deploy your project**
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/76DR9Q?referralCode=QW2HBC)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&redirect-url=https%3A%2F%2Fonce-ui.com%2Fdocs%2F)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/76DR9Q?referralCode=QW2HBC)  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&redirect-url=https%3A%2F%2Fonce-ui.com%2Fdocs%2F)  
