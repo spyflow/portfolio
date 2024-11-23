@@ -38,7 +38,7 @@ export default function Home() {
 				direction="column" justifyContent="center"
 				fillWidth fillHeight padding="l" gap="l">
 				<Heading
-					variant="display-strong-s"
+					variant="body-strong-m"
 					marginBottom="m">
 					¡Hola! Soy Spyflow
 				</Heading>
