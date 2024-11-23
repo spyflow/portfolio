@@ -49,7 +49,7 @@ export default function Home() {
 					Tengo 20 años y me especializo en desarrollo con tecnologías como Python, C, JavaScript, HTML y PHP.
 				</Text>
 				<Heading
-					variant="title-strong-m"
+					variant="body-strong-m"
 					marginBottom="m">
 					Mis Habilidades
 				</Heading>
