@@ -50,11 +50,12 @@ export default function Home() {
 								</span>
 							</Heading>
 							<Heading
-								variant="title-strong-m"
-								wrap="balance"
-								marginBottom="m">
-								Sobre mí
+   								variant="body-strong-m" // Cambiado por una variante válida
+    								wrap="balance"
+    								marginBottom="m">
+    								Sobre mí
 							</Heading>
+
 							<Text variant="body-default-m" onBackground="neutral-strong">
 								Me apasiona la tecnología y disfruto programando en lenguajes como Python, C, JavaScript, PHP y estructurando páginas web con HTML. Siempre estoy aprendiendo y buscando nuevos retos en el mundo del desarrollo.
 							</Text>
