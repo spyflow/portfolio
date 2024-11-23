@@ -79,14 +79,14 @@ const schemaData = {
 };
 
 export default function RootLayout({
-  	children,
+      children,
 }: Readonly<{
-  	children: React.ReactNode;
+      children: React.ReactNode;
 }>) {
-	return (
-		<Flex
-			as="html" lang="en"
-			fillHeight background="page"
+    return (
+        <Flex
+            as="html" lang="en"
+            fillHeight background="page"
             data-theme="dark"
             
             data-brand="violet"
@@ -97,39 +97,39 @@ export default function RootLayout({
             data-solid-style="plastic"
             data-surface="filled"
             data-transition="macro"
-			data-scaling={style.scaling}
-			className={classNames(
-				primary.variable, code.variable,
-				secondary ? secondary.variable : '',
-				tertiary ? tertiary.variable : ''
-			)}>
-			<head>
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-				/>
-			</head>
-			<Flex
-				as="body"
-				fillWidth fillHeight margin="0" padding="0">
-				<Background
-					style={{zIndex: '-1'}}
-					position="fixed"
-					mask="cursor"
-					dots={{
-						display: true,
-						opacity: 0.4,
-						size: '20'
-					}}
-					gradient={{
-						display: true,
-						opacity: 0.4,
-					}}/>
-				<Flex
-					flex={1} direction="column">
-					{children}
-				</Flex>
-			</Flex>
-		</Flex>
-	);
+            data-scaling={style.scaling}
+            className={classNames(
+                primary.variable, code.variable,
+                secondary ? secondary.variable : '',
+                tertiary ? tertiary.variable : ''
+            )}>
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                />
+            </head>
+            <Flex
+                as="body"
+                fillWidth fillHeight margin="0" padding="0">
+                {/* <Background
+                    style={{zIndex: '-1'}}
+                    position="fixed"
+                    mask="cursor"
+                    dots={{
+                        display: true,
+                        opacity: 0.4,
+                        size: '20'
+                    }}
+                    gradient={{
+                        display: true,
+                        opacity: 0.4,
+                    }}/> */}
+                <Flex
+                    flex={1} direction="column">
+                    {children}
+                </Flex>
+            </Flex>
+        </Flex>
+    );
 }
