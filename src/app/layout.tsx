@@ -1,4 +1,3 @@
-
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
@@ -6,23 +5,23 @@ import classNames from 'classnames';
 import { headers } from "next/headers";
 import { Metadata } from "next";
 
-import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config"
+import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
 
-import { Background, Flex } from '@/once-ui/components'
+import { Background, Flex } from '@/once-ui/components';
 
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 import { Roboto_Mono } from 'next/font/google';
 
 const primary = Inter({
-	variable: '--font-primary',
-	subsets: ['latin'],
-	display: 'swap',
-})
+    variable: '--font-primary',
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 const code = Roboto_Mono({
-	variable: '--font-code',
-	subsets: ['latin'],
-	display: 'swap',
+    variable: '--font-code',
+    subsets: ['latin'],
+    display: 'swap',
 });
 
 type FontConfig = {
@@ -30,8 +29,8 @@ type FontConfig = {
 };
 
 /*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
+    Replace with code for secondary and tertiary fonts
+    from https://once-ui.com/customize
 */
 const secondary: FontConfig | undefined = undefined;
 const tertiary: FontConfig | undefined = undefined;
@@ -39,56 +38,68 @@ const tertiary: FontConfig | undefined = undefined;
 */
 
 export async function generateMetadata(): Promise<Metadata> {
-	const host = (await headers()).get("host");
-	const metadataBase = host ? new URL(`https://${host}`) : undefined;
+    const host = (await headers()).get("host");
+    const metadataBase = host ? new URL(`https://${host}`) : undefined;
 
-	return {
-		title: meta.title,
-		description: meta.description,
-		openGraph: {
-			title: og.title,
-			description: og.description,
-			url: 'https://' + baseURL,
-			type: og.type as
-				| "website"
-				| "article"
-				| "book"
-				| "profile"
-				| "music.song"
-				| "music.album"
-				| "music.playlist"
-				| "music.radio_station"
-				| "video.movie"
-				| "video.episode"
-				| "video.tv_show"
-				| "video.other",
-		},
-		metadataBase,
-	};
+    const imageUrl = "https://iad.microlink.io/E2nhwsi2Df9BtbjmDOfwaGG9NpvRq4jvSur695zc2WjxXOSOiF5qLboDskofA181t5TuQZ9ZxMhdi_fZP0kWfg.png";
+
+    return {
+        title: meta.title,
+        description: meta.description,
+        openGraph: {
+            title: og.title,
+            description: og.description,
+            url: 'https://' + baseURL,
+            type: og.type as
+                | "website"
+                | "article"
+                | "book"
+                | "profile"
+                | "music.song"
+                | "music.album"
+                | "music.playlist"
+                | "music.radio_station"
+                | "video.movie"
+                | "video.episode"
+                | "video.tv_show"
+                | "video.other",
+            images: [
+                {
+                    url: imageUrl,
+                    alt: "Image description", // Puedes agregar una descripción alternativa para la imagen.
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            site: `@${meta.twitterHandle}`, // Asegúrate de tener un handle de Twitter en la configuración si lo necesitas.
+            image: imageUrl,
+        },
+        metadataBase,
+    };
 }
 
 const schemaData = {
-	"@context": "https://schema.org",
-	"@type": schema.type,
-	"url": "https://" + baseURL,
-	"logo": schema.logo,
-	"name": schema.name,
-	"description": schema.description,
-	"email": schema.email,
-	"sameAs": Object.values(social).filter(Boolean)
+    "@context": "https://schema.org",
+    "@type": schema.type,
+    "url": "https://" + baseURL,
+    "logo": schema.logo,
+    "name": schema.name,
+    "description": schema.description,
+    "email": schema.email,
+    "sameAs": Object.values(social).filter(Boolean),
 };
 
 export default function RootLayout({
-      children,
+    children,
 }: Readonly<{
-      children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
     return (
         <Flex
             as="html" lang="en"
             fillHeight background="page"
             data-theme="dark"
-            
             data-brand="violet"
             data-accent="blue"
             data-neutral="sand"
