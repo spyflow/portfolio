@@ -70,9 +70,6 @@ export async function generateMetadata(): Promise<Metadata> {
                 },
             ],
         },
-        twitter: {
-            image: imageUrl,
-        },
         metadataBase,
     };
 }
