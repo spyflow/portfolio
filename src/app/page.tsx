@@ -50,7 +50,7 @@ export default function Home() {
         }
     ];
 
-    const getSkillLogo = (skillName) => {
+    const getSkillLogo = (skillName: string): string => {
         const skill = skills.find(s => s.name.toLowerCase() === skillName.toLowerCase());
         return skill ? skill.logo : '';
     }
