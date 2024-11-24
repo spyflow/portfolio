@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Arrow } from '@/once-ui/components';
 import Link from 'next/link';
+import './page.module.css';
 
 export default function Home() {
     const skills = [
@@ -49,6 +50,11 @@ export default function Home() {
         }
     ];
 
+    const getSkillLogo = (skillName) => {
+        const skill = skills.find(s => s.name.toLowerCase() === skillName.toLowerCase());
+        return skill ? skill.logo : '';
+    }
+
     return (
         <Flex
             fillWidth paddingTop="l" paddingX="l"
@@ -76,19 +82,20 @@ export default function Home() {
                 <Grid
                     columns="repeat(auto-fit, minmax(120px, 1fr))"
                     gap="l"
-                    padding="l">
+                    padding="l" className="skills-grid">
                     {skills.map((skill) => (
                         <Flex
                             key={skill.name}
                             direction="column"
                             alignItems="center"
-                            gap="m">
+                            gap="m"
+                            className="skill-item">
                             <img
                                 src={skill.logo}
                                 alt={`${skill.name} logo`}
-                                style={{ width: '60px', height: '60px' }}
+                                className="skill-logo"
                             />
-                            <Text variant="body-strong-s">{skill.name}</Text>
+                            <Text variant="body-strong-s" className="skill-text">{skill.name}</Text>
                         </Flex>
                     ))}
                 </Grid>
@@ -115,7 +122,18 @@ export default function Home() {
                                 style={{ width: '100%', height: 'auto' }}
                             />
                             <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>
-                            <Text variant="body-default-s">Habilidades usadas: {project.skills.join(', ')}</Text>
+                            <div className="project-skills">
+                                {project.skills.map((skill) => (
+                                    <div key={skill} className="project-skill-item">
+                                        <img
+                                            src={getSkillLogo(skill)}
+                                            alt={`${skill} logo`}
+                                            className="project-skill-logo"
+                                            title={skill}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                             <Link href={project.url}>Visita el proyecto</Link>
                             <Link href={project.dmca}>DMCA</Link>
                         </Flex>
