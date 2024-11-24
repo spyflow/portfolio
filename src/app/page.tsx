@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Arrow } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
 import Link from 'next/link';
 
 const styles = {
@@ -20,6 +20,13 @@ const styles = {
     },
     projectSkillLogoHover: {
         transform: 'scale(1.1)',
+    },
+    projectSkills: {
+        display: 'flex',
+        flexDirection: 'row', // Apilar horizontalmente
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        gap: '10px',
     }
 };
 
@@ -81,7 +88,7 @@ export default function Home() {
                             <Text variant="body-default-m">{project.description}</Text>
                             <img src={project.previewImage} alt={`${project.name} preview`} style={{ width: '100%', height: 'auto' }} />
                             <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>
-                            <div className="project-skills">
+                            <div style={styles.projectSkills}>
                                 {project.skills.map((skill) => (
                                     <div key={skill} className="project-skill-item">
                                         <img
@@ -107,4 +114,4 @@ export default function Home() {
             </Flex>
         </Flex>
     );
-}
+            }
