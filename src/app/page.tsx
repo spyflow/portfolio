@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head'; // Para manipular <meta> tags
 import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
-import { getPreview } from '@/config'; // Importa la función getPreview
+import { getPreview } from 'src/once-ui/resources/config.js'; // Importa la función getPreview
 import Link from 'next/link';
 
 export default function Home() {
