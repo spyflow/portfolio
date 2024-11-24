@@ -4,8 +4,7 @@ import React from 'react';
 
 import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Arrow } from '@/once-ui/components';
 import Link from 'next/link';
-import './page.module.css';
-
+import '/src/app/page.module.css';
 export default function Home() {
     const skills = [
         {
