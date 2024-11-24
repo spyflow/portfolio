@@ -16,32 +16,28 @@ const style = {
 
 // default metadata
 const meta = {
-    title: 'Once UI - Your Personalized Design System for Next.js',
-    description: 'An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.'
-}
+    title: 'Spyflow - Portafolio de Desarrollo y Tecnología',
+    description: 'Explora el portafolio de Spyflow, desarrollador con experiencia en C, Python, JavaScript, PHP, TypeScript y más. Proyectos innovadores y soluciones tecnológicas personalizadas.'
+};
 
-
-// default open graph data
 const og = {
-    title: 'Once UI for Next.js',
-    description: 'We let designers code and developers design.',
+    title: 'Portafolio de Spyflow',
+    description: 'Descubre los proyectos y habilidades de Spyflow en el mundo del desarrollo, incluyendo C, Python, JavaScript, PHP, TypeScript y tecnologías modernas.',
     type: 'website'
-}
+};
 
-// default schema data
 const schema = {
     logo: '',
-    type: 'Organization',
-    name: 'One UI',
-    description: 'Once UI is an open-source design system and component library for Next.js.',
-    email: 'lorant@once-ui.com'
-}
+    type: 'Person',
+    name: 'Spyflow',
+    description: 'Spyflow es un desarrollador con experiencia en C, Python, JavaScript, PHP, TypeScript y más. Apasionado por crear soluciones tecnológicas innovadoras.',
+    email: 'contacto@spyflow.com'
+};
 
-// social links
 const social = {
-    twitter: 'https://www.twitter.com/_onceui',
-    linkedin: 'https://www.linkedin.com/company/once-ui/',
-    discord: 'https://discord.com/invite/5EyAQ4eNdS'
-}
-
+    twitter: 'https://x.com/LBSspyflow',
+    linkedin: 'https://cl.linkedin.com/in/javier-ferrada-riquelme',
+    github: 'https://github.com/spyflow',
+    discord: ''
+};
 export { baseURL, style, meta, og, schema, social };
