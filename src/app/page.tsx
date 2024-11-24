@@ -31,6 +31,10 @@ export default function Home() {
             name: "TYPESCRIPT",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         },
+        {
+            name: "CSS",
+            logo: "https://raw.githubusercontent.com/CSS-Next/logo.css/refs/heads/main/css.svg",
+        },
     ];
 
     const projects = [
