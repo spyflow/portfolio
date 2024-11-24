@@ -27,6 +27,10 @@ export default function Home() {
 			name: "PHP",
 			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
 		},
+		{
+			name: "TYPESCRIPT",
+			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+		},
 	];
 
 	return (
