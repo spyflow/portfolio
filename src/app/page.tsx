@@ -40,6 +40,8 @@ export default function Home() {
             description: "Es una página de películas que hace scraping para obtener la información de las películas y los links de visualización.",
             disclaimer: "No me hago responsable por el uso indebido de la página.",
             dmca: "https://video.makatunga.uy/dmca",
+            skills: ["HTML", "PHP", "JavaScript", "CSS", "Python"],
+            previewImage: "https://i.imgur.com/uKM7fyY.png"
         }
     ];
 
@@ -103,7 +105,13 @@ export default function Home() {
                             gap="m">
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
+                            <img
+                                src={project.previewImage}
+                                alt={`${project.name} preview`}
+                                style={{ width: '100%', height: 'auto' }}
+                            />
                             <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>
+                            <Text variant="body-default-s">Habilidades usadas: {project.skills.join(', ')}</Text>
                             <Link href={project.url}>Visita el proyecto</Link>
                             <Link href={project.dmca}>DMCA</Link>
                         </Flex>
