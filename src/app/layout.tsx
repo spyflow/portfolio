@@ -66,13 +66,12 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [
                 {
                     url: imageUrl,
-                    alt: "Image description", // Puedes agregar una descripción alternativa para la imagen.
+                    alt: "Image description",
                 },
             ],
         },
         twitter: {
             card: "summary_large_image",
-            site: `@${meta.twitterHandle}`, // Asegúrate de tener un handle de Twitter en la configuración si lo necesitas.
             image: imageUrl,
         },
         metadataBase,
