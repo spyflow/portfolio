@@ -31,7 +31,7 @@ const schema = {
     type: 'Person',
     name: 'Spyflow',
     description: 'Spyflow es un desarrollador con experiencia en C, Python, JavaScript, PHP, TypeScript y más. Apasionado por crear soluciones tecnológicas innovadoras.',
-    email: 'contacto@spyflow.com'
+    email: 'contacto@spyflow.link'
 };
 
 const social = {
