@@ -23,8 +23,7 @@ const meta = {
 const og = {
     title: 'Portafolio de Spyflow',
     description: 'Descubre los proyectos y habilidades de Spyflow en el mundo del desarrollo, incluyendo C, Python, JavaScript, PHP, TypeScript y tecnologías modernas.',
-    type: 'website',
-    image: 'https://iad.microlink.io/E2nhwsi2Df9BtbjmDOfwaGG9NpvRq4jvSur695zc2WjxXOSOiF5qLboDskofA181t5TuQZ9ZxMhdi_fZP0kWfg.png'
+    type: 'website'
 };
 
 const schema = {
