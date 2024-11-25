@@ -46,10 +46,18 @@ export default function Home() {
         {
             name: "Web Scrapping",
             url: "https://peliculas.spyflow.link/",
+            repo: "https://github.com/spyflow/firstry",
             description: "Es una página de películas que hace scraping para obtener la información de las películas y los links de visualización.",
             disclaimer: "No me hago responsable por el uso indebido de la página.",
             dmca: "https://peliculas.spyflow.link/dmca",
             skills: ["HTML", "PHP", "JavaScript", "CSS", "Python"],
+            previewImage: "https://i.imgur.com/uKM7fyY.png"
+        },
+        {
+            name: "Discord Music Bot",
+            repo: "https://github.com/spyflow/musicbot",
+            description: "Un bot de música para Discord desarrollado en Python.",
+            skills: ["Python"],
             previewImage: "https://i.imgur.com/uKM7fyY.png"
         }
     ];
@@ -88,7 +96,7 @@ export default function Home() {
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
                             <img src={project.previewImage} alt={`${project.name} preview`} style={{ width: '100%', height: 'auto' }} />
-                            <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>
+                            {project.disclaimer && <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>}
                             <div style={styles.projectSkills}>
                                 {project.skills.map((skill) => (
                                     <div key={skill} className="project-skill-item">
@@ -103,8 +111,9 @@ export default function Home() {
                                     </div>
                                 ))}
                             </div>
-                            <Link href={project.url}>Visita el proyecto</Link>
-                            <Link href={project.dmca}>DMCA</Link>
+                            {project.url && <Link href={project.url}>Visita el proyecto</Link>}
+                            {project.repo && <Link href={project.repo}>Repositorio</Link>}
+                            {project.dmca && <Link href={project.dmca}>DMCA</Link>}
                         </Flex>
                     ))}
                 </Grid>
