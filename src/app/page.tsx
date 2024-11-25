@@ -24,7 +24,7 @@ const styles: { [key: string]: CSSProperties } = {
     },
     projectSkills: {
         display: 'flex',
-        flexDirection: 'row', // Apilar horizontalmente
+        flexDirection: 'row',
         justifyContent: 'center',
         flexWrap: 'wrap',
         gap: '10px',
@@ -74,7 +74,7 @@ export default function Home() {
                                 src={skill.logo}
                                 alt={`${skill.name} logo`}
                                 style={styles.skillLogo}
-                                onMouseEnter={(e) => e.currentTarget.style.transform = styles.skillLogoHover.transform}
+                                onMouseEnter={(e) => e.currentTarget.style.transform = styles.skillLogoHover.transform || ''}
                                 onMouseLeave={(e) => e.currentTarget.style.transform = ''}
                             />
                             <Text variant="body-strong-s" className="skill-text">{skill.name}</Text>
@@ -96,7 +96,7 @@ export default function Home() {
                                             src={getSkillLogo(skill)}
                                             alt={`${skill} logo`}
                                             style={styles.projectSkillLogo}
-                                            onMouseEnter={(e) => e.currentTarget.style.transform = styles.projectSkillLogoHover.transform}
+                                            onMouseEnter={(e) => e.currentTarget.style.transform = styles.projectSkillLogoHover.transform || ''}
                                             onMouseLeave={(e) => e.currentTarget.style.transform = ''}
                                             title={skill}
                                         />
@@ -115,4 +115,4 @@ export default function Home() {
             </Flex>
         </Flex>
     );
-            }
+}
