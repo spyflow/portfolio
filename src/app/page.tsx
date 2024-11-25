@@ -10,6 +10,8 @@ const styles: { [key: string]: CSSProperties } = {
         width: '50px',
         height: '50px',
         transition: 'transform 0.2s',
+        display: 'block',
+        margin: '0 auto'
     },
     skillLogoHover: {
         transform: 'scale(1.1)',
@@ -18,14 +20,16 @@ const styles: { [key: string]: CSSProperties } = {
         width: '30px',
         height: '30px',
         transition: 'transform 0.2s',
+        display: 'block',
+        margin: '0 auto'
     },
     projectSkillLogoHover: {
         transform: 'scale(1.1)',
     },
     projectSkills: {
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
         flexWrap: 'wrap',
         gap: '10px',
     },
@@ -33,6 +37,8 @@ const styles: { [key: string]: CSSProperties } = {
         width: '80%',
         height: 'auto',
         borderRadius: '15px',
+        display: 'block',
+        margin: '0 auto'
     },
     projectContainer: {
         display: 'flex',
@@ -43,8 +49,8 @@ const styles: { [key: string]: CSSProperties } = {
     },
     projectLinks: {
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
         gap: '10px',
     }
 };
