@@ -3,8 +3,9 @@
 import React from 'react';
 import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
 import Link from 'next/link';
+import { CSSProperties } from 'react';
 
-const styles = {
+const styles: { [key: string]: CSSProperties } = {
     skillLogo: {
         width: '50px',
         height: '50px',
@@ -114,4 +115,4 @@ export default function Home() {
             </Flex>
         </Flex>
     );
-}
+            }
