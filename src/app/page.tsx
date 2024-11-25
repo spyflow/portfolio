@@ -4,7 +4,6 @@ import React from 'react';
 import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
 import Link from 'next/link';
 import { CSSProperties } from 'react';
-import './page.css'; // Import the CSS file
 
 const styles: { [key: string]: CSSProperties } = {
     skillLogo: {
@@ -41,6 +40,11 @@ const styles: { [key: string]: CSSProperties } = {
         alignItems: 'center',
         gap: '10px',
         textAlign: 'center',
+    },
+    projectContainerResponsive: {
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        textAlign: 'left',
     },
     projectLinks: {
         display: 'flex',
@@ -85,10 +89,25 @@ export default function Home() {
     const getSkillLogo = (skillName: string): string => {
         const skill = skills.find(s => s.name.toLowerCase() === skillName.toLowerCase());
         return skill ? skill.logo : '';
-    }
+    };
 
     return (
         <Flex fillWidth paddingTop="l" paddingX="l" direction="column" alignItems="center" flex={1}>
+            <style jsx>{`
+                @media (max-width: 600px) {
+                    .project-container {
+                        flex-direction: row;
+                        align-items: flex-start;
+                        text-align: left;
+                    }
+                    .project-preview-image {
+                        max-width: 40%;
+                    }
+                    .project-skills {
+                        justify-content: flex-start;
+                    }
+                }
+            `}</style>
             <Flex as="main" direction="column" justifyContent="center" fillWidth fillHeight padding="l" gap="l">
                 <Heading variant="body-strong-xl" marginBottom="m">¡Hola! Soy Spyflow</Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="m">
@@ -112,10 +131,19 @@ export default function Home() {
                 <Heading variant="body-strong-m" marginBottom="m">Proyectos</Heading>
                 <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap="l" padding="l">
                     {projects.map((project) => (
-                        <Flex key={project.name} style={styles.projectContainer} className="project-container">
+                        <Flex
+                            key={project.name}
+                            style={styles.projectContainer}
+                            className="project-container"
+                        >
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
-                            <img src={project.previewImage} alt={`${project.name} preview`} style={styles.projectPreviewImage} />
+                            <img
+                                src={project.previewImage}
+                                alt={`${project.name} preview`}
+                                className="project-preview-image"
+                                style={styles.projectPreviewImage}
+                            />
                             {project.disclaimer && <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>}
                             <div style={styles.projectSkills} className="project-skills">
                                 {project.skills.map((skill) => (
