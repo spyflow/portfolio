@@ -94,7 +94,7 @@ export default function Home() {
     return (
         <Flex fillWidth paddingTop="l" paddingX="l" direction="column" alignItems="center" flex={1}>
             <style jsx>{`
-                @media (max-width: 600px) {
+                @media (max-width: 800px) {
                     .project-container {
                         flex-direction: row;
                         align-items: flex-start;
