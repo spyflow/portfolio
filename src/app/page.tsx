@@ -45,10 +45,10 @@ export default function Home() {
     const projects = [
         {
             name: "Web Scrapping",
-            url: "https://video.makatunga.uy/peliculas/",
+            url: "https://peliculas.spyflow.link/",
             description: "Es una página de películas que hace scraping para obtener la información de las películas y los links de visualización.",
             disclaimer: "No me hago responsable por el uso indebido de la página.",
-            dmca: "https://video.makatunga.uy/dmca",
+            dmca: "https://peliculas.spyflow.link/dmca",
             skills: ["HTML", "PHP", "JavaScript", "CSS", "Python"],
             previewImage: "https://i.imgur.com/uKM7fyY.png"
         }
