@@ -110,7 +110,7 @@ export default function Home() {
                 </Grid>
                 <Flex gap="m" marginTop="l">
                     <Button href="https://github.com/spyflow" prefixIcon="github" size="m" variant="secondary">GitHub</Button>
-                    <Button href="https://cl.linkedin.com/in/javier-ferrada-riquelme" prefixIcon="linkedin" size="m" variant="secondary">LinkedIn</Button>
+                    <Button href="https://cl.linkedin.com/in/spyflow" prefixIcon="linkedin" size="m" variant="secondary">LinkedIn</Button>
                 </Flex>
             </Flex>
         </Flex>
