@@ -46,6 +46,18 @@ const styles: { [key: string]: CSSProperties } = {
         flexDirection: 'row',
         justifyContent: 'center',
         gap: '10px',
+    },
+    '@media (max-width: 600px)': {
+        projectContainer: {
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+        },
+        projectSkills: {
+            flexDirection: 'column',
+        },
+        projectLinks: {
+            flexDirection: 'column',
+        }
     }
 };
 
