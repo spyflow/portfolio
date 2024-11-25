@@ -24,12 +24,15 @@
 @media (max-width: 600px) {
     .project-container {
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
     }
+
+    .project-container img {
+        max-width: 40%;
+    }
+
     .project-skills {
-        flex-direction: column;
-    }
-    .project-links {
-        flex-direction: column;
+        justify-content: flex-start;
     }
 }
