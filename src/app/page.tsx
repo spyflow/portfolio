@@ -4,6 +4,7 @@ import React from 'react';
 import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
 import Link from 'next/link';
 import { CSSProperties } from 'react';
+import './page.css'; // Import the CSS file
 
 const styles: { [key: string]: CSSProperties } = {
     skillLogo: {
@@ -46,18 +47,6 @@ const styles: { [key: string]: CSSProperties } = {
         flexDirection: 'row',
         justifyContent: 'center',
         gap: '10px',
-    },
-    '@media (max-width: 600px)': {
-        projectContainer: {
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-        },
-        projectSkills: {
-            flexDirection: 'column',
-        },
-        projectLinks: {
-            flexDirection: 'column',
-        }
     }
 };
 
@@ -123,12 +112,12 @@ export default function Home() {
                 <Heading variant="body-strong-m" marginBottom="m">Proyectos</Heading>
                 <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap="l" padding="l">
                     {projects.map((project) => (
-                        <Flex key={project.name} style={styles.projectContainer}>
+                        <Flex key={project.name} style={styles.projectContainer} className="project-container">
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
                             <img src={project.previewImage} alt={`${project.name} preview`} style={styles.projectPreviewImage} />
                             {project.disclaimer && <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>}
-                            <div style={styles.projectSkills}>
+                            <div style={styles.projectSkills} className="project-skills">
                                 {project.skills.map((skill) => (
                                     <div key={skill} className="project-skill-item">
                                         <img
@@ -142,7 +131,7 @@ export default function Home() {
                                     </div>
                                 ))}
                             </div>
-                            <div style={styles.projectLinks}>
+                            <div style={styles.projectLinks} className="project-links">
                                 {project.url && <Link href={project.url}>Visita el proyecto</Link>}
                                 {project.repo && <Link href={project.repo}>Repositorio</Link>}
                                 {project.dmca && <Link href={project.dmca}>DMCA</Link>}
