@@ -28,6 +28,24 @@ const styles: { [key: string]: CSSProperties } = {
         justifyContent: 'center',
         flexWrap: 'wrap',
         gap: '10px',
+    },
+    projectPreviewImage: {
+        width: '80%',
+        height: 'auto',
+        borderRadius: '15px',
+    },
+    projectContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '10px',
+        textAlign: 'center',
+    },
+    projectLinks: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: '10px',
     }
 };
 
@@ -92,10 +110,10 @@ export default function Home() {
                 <Heading variant="body-strong-m" marginBottom="m">Proyectos</Heading>
                 <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap="l" padding="l">
                     {projects.map((project) => (
-                        <Flex key={project.name} direction="column" alignItems="center" gap="m">
+                        <Flex key={project.name} style={styles.projectContainer}>
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
-                            <img src={project.previewImage} alt={`${project.name} preview`} style={{ width: '100%', height: 'auto' }} />
+                            <img src={project.previewImage} alt={`${project.name} preview`} style={styles.projectPreviewImage} />
                             {project.disclaimer && <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>}
                             <div style={styles.projectSkills}>
                                 {project.skills.map((skill) => (
@@ -111,9 +129,11 @@ export default function Home() {
                                     </div>
                                 ))}
                             </div>
-                            {project.url && <Link href={project.url}>Visita el proyecto</Link>}
-                            {project.repo && <Link href={project.repo}>Repositorio</Link>}
-                            {project.dmca && <Link href={project.dmca}>DMCA</Link>}
+                            <div style={styles.projectLinks}>
+                                {project.url && <Link href={project.url}>Visita el proyecto</Link>}
+                                {project.repo && <Link href={project.repo}>Repositorio</Link>}
+                                {project.dmca && <Link href={project.dmca}>DMCA</Link>}
+                            </div>
                         </Flex>
                     ))}
                 </Grid>
