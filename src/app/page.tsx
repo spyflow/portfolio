@@ -75,6 +75,7 @@ export default function Home() {
             name: "Discord Music Bot",
             repo: "https://github.com/spyflow/musicbot",
             description: "Este es un simple bot de Discord para reproducir música de YouTube en un canal de voz, El bot esta escito en python",
+            disclaimer: "Este proyecto se ha interrumpido y ya no recibirá actualizaciones.",
             skills: ["Python"],
             previewImage: "https://i.imgur.com/uKM7fyY.png"
         }
