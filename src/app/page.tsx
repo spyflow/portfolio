@@ -10,8 +10,6 @@ const styles: { [key: string]: CSSProperties } = {
         width: '50px',
         height: '50px',
         transition: 'transform 0.2s',
-        display: 'block',
-        margin: '0 auto'
     },
     skillLogoHover: {
         transform: 'scale(1.1)',
@@ -20,37 +18,15 @@ const styles: { [key: string]: CSSProperties } = {
         width: '30px',
         height: '30px',
         transition: 'transform 0.2s',
-        display: 'block',
-        margin: '0 auto'
     },
     projectSkillLogoHover: {
         transform: 'scale(1.1)',
     },
     projectSkills: {
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
         flexWrap: 'wrap',
-        gap: '10px',
-    },
-    projectPreviewImage: {
-        width: '80%',
-        height: 'auto',
-        borderRadius: '15px',
-        display: 'block',
-        margin: '0 auto'
-    },
-    projectContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '10px',
-        textAlign: 'center',
-    },
-    projectLinks: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
         gap: '10px',
     }
 };
@@ -116,10 +92,10 @@ export default function Home() {
                 <Heading variant="body-strong-m" marginBottom="m">Proyectos</Heading>
                 <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap="l" padding="l">
                     {projects.map((project) => (
-                        <Flex key={project.name} style={styles.projectContainer}>
+                        <Flex key={project.name} direction="column" alignItems="center" gap="m">
                             <Text variant="body-strong-s">{project.name}</Text>
                             <Text variant="body-default-m">{project.description}</Text>
-                            <img src={project.previewImage} alt={`${project.name} preview`} style={styles.projectPreviewImage} />
+                            <img src={project.previewImage} alt={`${project.name} preview`} style={{ width: '100%', height: 'auto' }} />
                             {project.disclaimer && <Text variant="body-default-s" style={{ color: 'red' }}>{project.disclaimer}</Text>}
                             <div style={styles.projectSkills}>
                                 {project.skills.map((skill) => (
@@ -135,11 +111,9 @@ export default function Home() {
                                     </div>
                                 ))}
                             </div>
-                            <div style={styles.projectLinks}>
-                                {project.url && <Link href={project.url}>Visita el proyecto</Link>}
-                                {project.repo && <Link href={project.repo}>Repositorio</Link>}
-                                {project.dmca && <Link href={project.dmca}>DMCA</Link>}
-                            </div>
+                            {project.url && <Link href={project.url}>Visita el proyecto</Link>}
+                            {project.repo && <Link href={project.repo}>Repositorio</Link>}
+                            {project.dmca && <Link href={project.dmca}>DMCA</Link>}
                         </Flex>
                     ))}
                 </Grid>
