@@ -1,36 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ResponsiveContainer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Definir la función de detección de tamaño
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 600);
+    };
+
+    // Llamar a la función una vez al cargar el componente
+    handleResize();
+
+    // Añadir el evento de redimensionamiento
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el evento cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const containerStyle: React.CSSProperties = {
     display: 'flex',
-    flexDirection: 'row', // Por defecto, horizontal
+    flexDirection: isSmallScreen ? 'column' : 'row', // Cambiar dinámicamente
     alignItems: 'center',
     textAlign: 'center',
     gap: '10px',
   };
 
-  const mediaQueryStyle: React.CSSProperties = {
-    flexDirection: 'column', // Cambiar a vertical en pantallas pequeñas
-  };
-
-  // Detectar el ancho de la pantalla
-  const isSmallScreen = window.matchMedia('(max-width: 600px)').matches;
-
-  return (
-    <div style={{ ...containerStyle, ...(isSmallScreen ? mediaQueryStyle : {}) }}>
-      {children}
-    </div>
-  );
+  return <div style={containerStyle}>{children}</div>;
 };
 
-const App: React.FC = () => {
-  return (
-    <ResponsiveContainer>
-      <div style={{ background: 'lightblue', padding: '10px' }}>Elemento 1</div>
-      <div style={{ background: 'lightgreen', padding: '10px' }}>Elemento 2</div>
-      <div style={{ background: 'lightcoral', padding: '10px' }}>Elemento 3</div>
-    </ResponsiveContainer>
-  );
-};
-
-export default App;
+export default ResponsiveContainer;
