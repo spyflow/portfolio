@@ -1,25 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, ResponsiveContainer } from '@/once-ui/components';
 import Link from 'next/link';
 import { CSSProperties } from 'react';
-
-const ResponsiveContainer: React.FC = ({ children }) => {
-    return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: window.innerWidth < 600 ? 'column' : 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-            }}
-        >
-            {children}
-        </div>
-    );
-};
 
 const styles: { [key: string]: CSSProperties } = {
     skillLogo: {
