@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Heading, Text, Flex, Button, Grid, ResponsiveContainer} from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid} from '@/once-ui/components';
+import ResponsiveContainer from '@/once-ui/components/ResponsiveContainer';
 import Link from 'next/link';
 import { CSSProperties } from 'react';
 
