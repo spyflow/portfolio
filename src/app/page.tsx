@@ -5,6 +5,22 @@ import { Heading, Text, Flex, Button, Grid } from '@/once-ui/components';
 import Link from 'next/link';
 import { CSSProperties } from 'react';
 
+const ResponsiveContainer: React.FC = ({ children }) => {
+    return (
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: window.innerWidth < 600 ? 'column' : 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '10px',
+            }}
+        >
+            {children}
+        </div>
+    );
+};
+
 const styles: { [key: string]: CSSProperties } = {
     skillLogo: {
         width: '50px',
@@ -114,7 +130,8 @@ export default function Home() {
                     ))}
                 </Grid>
                 <Heading variant="body-strong-m" marginBottom="m">Proyectos</Heading>
-                <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap="l" padding="l">
+                {/* Aquí usamos el ResponsiveContainer */}
+                <ResponsiveContainer>
                     {projects.map((project) => (
                         <Flex
                             key={project.name}
@@ -151,7 +168,7 @@ export default function Home() {
                             </div>
                         </Flex>
                     ))}
-                </Grid>
+                </ResponsiveContainer>
                 <Flex gap="m" marginTop="l">
                     <Button href="https://github.com/spyflow" prefixIcon="github" size="m" variant="secondary">GitHub</Button>
                     <Button href="https://cl.linkedin.com/in/spyflow" prefixIcon="linkedin" size="m" variant="secondary">LinkedIn</Button>
