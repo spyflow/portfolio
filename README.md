@@ -20,7 +20,7 @@ Más información en [once-ui.com/docs](https://once-ui.com/docs).
 # **Sobre mí**
 ¡Conecta conmigo!  
 
-**[Tu Nombre]**  
+**Spyflow**  
 - Sitio web: [spyflow.link/twitch](#)  
 - LinkedIn: [cl.linkedin.com/in/javier-ferrada-riquelme](#)  
 - GitHub: [github.com/spyflow](#)  
