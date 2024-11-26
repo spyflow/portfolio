@@ -93,21 +93,6 @@ export default function Home() {
 
     return (
         <Flex fillWidth paddingTop="l" paddingX="l" direction="column" alignItems="center" flex={1}>
-            <style jsx>{`
-                @media (max-width: 800px) {
-                    .project-container {
-                        flex-direction: row;
-                        align-items: flex-start;
-                        text-align: left;
-                    }
-                    .project-preview-image {
-                        max-width: 40%;
-                    }
-                    .project-skills {
-                        justify-content: flex-start;
-                    }
-                }
-            `}</style>
             <Flex as="main" direction="column" justifyContent="center" fillWidth fillHeight padding="l" gap="l">
                 <Heading variant="body-strong-xl" marginBottom="m">¡Hola! Soy Spyflow</Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="m">
