@@ -69,7 +69,7 @@ export default function Home() {
     const projects = [
         {
             name: "Web Scrapping",
-            url: "https://peliculas.spyflow.link/",
+            url: "https://video.makatunga.uy/",
             repo: "https://github.com/spyflow/firstry",
             description: "Es una página de películas que hace scraping para obtener la información de las películas y los links de visualización.",
             disclaimer: "No me hago responsable por el uso indebido de la página.",
